@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="fire-bowl.css">
+    <script src="jquery-3.4.1.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <h1 class="title">跨火盆模拟器</h1>
+    <div class="imgPart">
+        <img src="img/跳2.png" class="jump-action2">
+        <h3 class="let-go">霉运退散</h3>
+        <img src="img/火盆.png" class="fire-bowl">
+        <img src="img/跳3.png" class="jump-action3">
+        <img src="img/跳1.png" class="jump-action">
+    </div>
+    <div class="button">
+        <button onclick="jump()">跨！</button>
+        <h2 id="times"></h2>
+    </div>
+<script>
+    var y=document.getElementById("times");
+var time=0;
+$(window).ready(function () {
+    $(".jump-action2").hide();
+    $(".jump-action3").hide();
+    $(".let-go").hide()
+  
+});
+
+function jump(){
+    $(".jump-action").hide();
+    $(".let-go").show();
+    $(".jump-action2").show().delay(200).promise().done(function(){
+        $(".jump-action2").hide();
+        $(".let-go").fadeOut(1000);
+        $(".jump-action3").show().delay(200).promise().done(function () {
+            $(".jump-action3").hide();
+            $(".jump-action").show();
+          });
+    });
+    time=time+1;
+    y.innerHTML="今日已跨"+time+"次";
+}
+</script>
+</body>
+</html>

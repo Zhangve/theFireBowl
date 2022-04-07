@@ -1,0 +1,39 @@
+body{
+    background-color: tomato;
+}
+.title{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+}
+.fire-bowl{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    height: 500;
+    width: 1200;
+    color:black;
+}
+.jump-action{
+    position: absolute;
+    left:30%;
+}
+.jump-action2{
+    position: absolute;
+    left:25%;
+}
+.jump-action3{
+    position: absolute;
+    top: 50%;
+    left:20%;
+}
+.button{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+}
+.let-go{
+    position: absolute;
+    top:20%;
+    left: 55%;
+}
